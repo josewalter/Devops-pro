@@ -1,0 +1,10 @@
+Comandos para criar um banco de dados dentro de um container
+===========================================================================================================================================
+Comando para criar a base de dados: MYSQL_DATABASE
+docker container run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD="root123" -e MYSQL_DATABASE=testedocker -e MYSQL_USER=userdocker -e MYSQL_PASSWORD=testedockerpwd mysql
+
+Comando para criar a base de dados: POSTGRES_DB
+docker container run -d -p 5432:5432 -e POSTGRES_ROOT_PASSWORD="root123" -e POSTGRES_DB=curso_docker -e POSTGRES_USER=docker_usr -e POSTGRES_PASSWORD=docker_pwd postgres
+
+Comando para criar a base de dados: Mongo_DB
+docker  run -d --name mongo  -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=mongo_usr  -e MONGO_INITDB_ROOT_PASSWORD=mongo_pwd mongo:latest
